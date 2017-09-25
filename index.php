@@ -1,5 +1,16 @@
 <?php
- include('header.php');
- include('footer.php');
+ get_header();
+ get_footer();
+?>
+
+<!-- The Loop-->
+<?php
+if (have_posts()): whie(have_posts()): the_post;
  ?>
- <h4>garpentier1</h4>
+
+ <h3> <?php the_title(); ?>
+
+<p><?php the_content ?></p>
+
+<?php enwhile; endif; ?>
+<?php get_footer(); ?>
